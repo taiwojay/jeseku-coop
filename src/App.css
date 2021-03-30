@@ -1,38 +1,336 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App *{
+  font-family: 'Montserrat', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.page{
+ min-height: 70vh;
+ position: relative;
+}
+.essay{
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(to right, var(--cover-blue), white);
+}
+.page .essay h3{
+  padding: 0.7em;
+}
+@media screen and (max-width: 700px) {
+  .essay{
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
+:root{
+   --deep-sky-blue: #009ACD;
+   --cover-blue: #B2DFEE;
+   --footer-dark: #001B3A;
+   --main-font: 'Open Sans', sans-serif;
+   --ash-white: #f5f5f5;
+   --tomato-red: #ff6347
+}
+.nav{
+  background-color: white;
+}
+/*cover*/
+.blue3-font{
+   color: #03254c;
+}
+.cover{
+  background: var(--cover-blue);
+  min-height: 40vh;
+}
+.cover-text{
+  padding: 20px;
+}
+.cover .cover-text h2 span{
+  padding: 20px;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.blue3-font{
+   color: #03254c;
+}
+
+/*sample animation*/
+.sample{
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: #001B3A;
   color: white;
+  position: relative;
+  animation-name: myanime;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  border-radius: 50%;
+}
+.sub-sample{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 20%; left: 50%;
+   transform: translate(-50%,-50%);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes myanime{
+  0%{
+    background-color: #001B3A;
+    left: -25%;
+    top: 0px;
   }
-  to {
+  25%{
+    background-color: var(--deep-sky-blue);
+    left: 25%;
+    transform: rotate(120deg);
+  }
+  50%{
+    background-color: white;
+    left: 50%;
+    transform: rotate(270deg);
+  }
+  100%{
+    background-color: var(--cover-blue);
+    left: 100%;
+    top: 0px;
     transform: rotate(360deg);
   }
 }
+
+/*cool contact us button*/
+.contact-us-btn{
+  cursor: pointer;
+  position: relative;
+  top: 50%; left: 50%;
+  margin-top: 20px;
+  transform: translate(-50%,-50%);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: var(--footer-dark);
+  color: white;
+  font-size: 110%;
+  font-weight: bold;
+  animation-name: mybuttonanimation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.contact-btn-text{
+    position: absolute;
+    top: 50%; left: 50%;
+   transform: translate(-50%,-50%);
+}
+.contact-us-btn:hover{
+  background-color: var(--footer-dark);
+}
+@keyframes mybuttonanimation{
+  0%{
+    background-color: #001B3A;
+    top: 0px;
+  }
+  25%{
+    top: 5px;
+    background-color: var(--footer-dark);
+  }
+  50%{
+    top: 5px;
+  }
+  100%{
+    top: 0px;
+  }
+}
+
+/*grid-wrapper*/
+.wrapper{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 1fr;
+}
+.box-wrapper{
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  min-height: 360px;
+}
+.box{
+  position: relative;
+  background: #f5f5f5;
+  box-shadow: 2px 4px #888888;
+  padding: 20px;
+  min-height: 280px;
+  border-radius: 10px;
+}
+.box-btn{
+   position: absolute;
+   top: 85%; left: 50%;
+   transform: translate(-50%,-50%);
+}
+@media only screen and (max-width: 350px) {
+  .box{
+    width: 80%;
+  } 
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper{
+    grid-template-columns: 1fr;
+  }
+}
+/* what we do*/
+.what-we-do{
+  background: var(--cover-blue);
+  padding: 20px;
+}
+.action-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.action{
+  padding: 2em;
+}
+.number{
+  font-size: 300%;
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .action-grid{
+    grid-template-columns: 1fr;
+  }
+}
+/*members grid*/
+.members-grid{
+  padding: 30px;
+  display: block;
+  background: var(--footer-dark);
+}
+.member{
+  background-image:linear-gradient( to right , white,#B2DFEE );
+  padding: 1.5em;
+  margin: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  transition: 0.6s;
+}
+.member:hover{
+  margin: 35px;
+}
+.img-ctn{
+  height: 100%;
+  width: 80px;
+  background-color: #B2DFEE;
+  border-radius: 0%;
+  display: inline-block;
+  position: absolute;
+   top: 50%; left: -1%;
+   transform: translate(-50%,-50%);
+   transition: 0.6s;
+}
+img{
+  width: 80px;
+  height: 100%;
+  object-fit: cover;
+}
+.img-ctn:hover{
+   height: 90px;
+   width: 90px;
+}
+
+.members-grid h3{
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .member{
+    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .img-ctn{
+    height: 70px;
+    width: 70px;
+  }
+}
+/*footer*/
+footer{
+  margin-top: auto;
+  width: 100%;
+  background-color: var(--footer-dark);
+}
+.footer-content{
+  padding: 35px;
+  float: left;
+}
+.footer-content *{
+  color: white;
+}
+.footer-content .logo{
+  font-size: 200%;
+  color: white;
+}
+span a{
+  padding: 10px;
+  color: white;
+}
+.copyright{
+  color: white;
+  font-size: 80%;
+}
+
+.icon{
+  margin-right: 7px;
+  margin-left: 7px;
+}
+.icon:hover{
+  color: black;
+}
+footer .footer-content .quick-link{
+  transition: 0.6s;
+}
+footer .footer-content .quick-link:hover{
+   font-size: 110%;
+   color: #B2DFEE;
+   text-decoration: none;
+}
+
+ /*fadein*/
+ .fade-in {
+  animation: fadeIn ease 1.5s;
+  -webkit-animation: fadeIn ease 1.5s;
+  -moz-animation: fadeIn ease 1.5s;
+  -o-animation: fadeIn ease 1.5s;
+  -ms-animation: fadeIn ease 1.5s;
+  }
+  @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
