@@ -24,7 +24,7 @@ export default function Footer() {
           <div>U.I Secretariat Road, Awolowo Junction,</div>
           <div>Bodjia, Ibadan</div>
           <div> <span> <FontAwesomeIcon icon={faPhone} className='icon'/></span> 0807 774 6342, 0803 382 9278</div>
-          <div><span> <FontAwesomeIcon icon={faEnvelope} className='icon'/></span> eniteejay@gmail.com</div>
+          <div><span> <FontAwesomeIcon icon={faEnvelope} className='icon'/></span> jesekucoop@gmail.com</div>
         </div>
         <div className='footer-content'>
           <h3>Our Socials</h3>
