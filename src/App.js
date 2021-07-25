@@ -8,6 +8,7 @@ import HomePage from './HomePage'
 import AboutUs from './AboutUs'
 import Products from './Products'
 import ScrollToTop from './components/ScrollToTop'
+import Register from './Register'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <Route path='/' exact component={HomePage}/>
       <Route path='/about-us' exact component={AboutUs} />
       <Route path='/products' exact component={Products} />
+        <Route path='/register' exact component={Register} />
       </Switch>
     <Footer />
     </div>
