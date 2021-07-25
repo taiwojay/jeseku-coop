@@ -23,7 +23,7 @@ export default function Footer() {
           <div><span><FontAwesomeIcon icon={faLocationArrow} className='icon'/></span>Oyeks Plaza, Beside Mobil Filling Station,</div>
           <div>U.I Secretariat Road, Awolowo Junction,</div>
           <div>Bodjia, Ibadan</div>
-          <div> <span> <FontAwesomeIcon icon={faPhone} className='icon'/></span> 0807 774 6342, 0803 382 9278</div>
+          <div> <span> <FontAwesomeIcon icon={faPhone} className='icon'/></span> 0811 761 6816</div>
           <div><span> <FontAwesomeIcon icon={faEnvelope} className='icon'/></span> jesekucoop@gmail.com</div>
         </div>
         <div className='footer-content'>
