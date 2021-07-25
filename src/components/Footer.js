@@ -15,8 +15,10 @@ export default function Footer() {
         <Link to='/about-us' className='quick-link'>
         <p className='quick-link'>About</p>
         </Link>
-         <a href='https://forms.gle/yG6tJ66dtNiqe7uo9' className='quick-link'>Join Us</a>
-  
+        <Link to='/register' className='quick-link'>
+        <p className='quick-link'>Join Us</p>
+        </Link>
+        
         </div>
         <div className='footer-content'>
         <h3>Address</h3>
