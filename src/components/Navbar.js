@@ -15,6 +15,7 @@ export default function Navigation() {
       <Nav.Link as={Link} to ='/'>Home</Nav.Link>
       <Nav.Link as={Link} to ='/about-us'>About Us</Nav.Link>
       <Nav.Link href="https://forms.gle/yG6tJ66dtNiqe7uo9">Register</Nav.Link>
+      <Nav.Link as={Link} to ='/about-us'>Register2</Nav.Link>
     </Nav>
   </Navbar.Collapse>
 </Navbar>
